@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0875dc">
+  <meta name="description" content="Kivit's Goes Uren Online — planning, pontaj, pauze, request review și transport.">
+  <title>Kivit's Goes Uren Online</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/assets/kivits-goes-logo.svg">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <section class="auth-layout" id="authScreen">
+    <div class="auth-visual">
+      <img class="auth-logo" src="/assets/kivits-goes-logo.svg" alt="Kivits Goes">
+      <p class="eyebrow light">WORKFORCE OPERATIONS</p>
+      <h1>Planning, ore și echipe într-un sistem online.</h1>
+      <p class="auth-copy">Conturi centralizate, pauze multiple, pontaj, Request review, transport și control administrativ complet.</p>
+      <div class="feature-strip">
+        <span>Planning live</span><span>Role access</span><span>Audit & backup</span>
+      </div>
+    </div>
+    <div class="auth-side">
+      <form class="auth-card" id="loginForm">
+        <p class="eyebrow">SECURE ACCESS</p>
+        <h2>Autentificare</h2>
+        <p class="muted">Intră folosind ID-ul creat de Administrator.</p>
+        <label class="field"><span>ID</span><input id="loginId" autocomplete="username" autocapitalize="none" required></label>
+        <label class="field"><span>Parolă</span><input id="loginPassword" type="password" autocomplete="current-password" required></label>
+        <button class="btn primary wide" type="submit">Intră în aplicație</button>
+        <p class="small muted">Nu există înregistrare publică.</p>
+      </form>
+      <form class="auth-card hidden" id="activationForm">
+        <p class="eyebrow">PERSONAL INVITATION</p>
+        <h2>Activează contul</h2>
+        <div id="activationIdentity" class="identity-card"></div>
+        <label class="field"><span>Alege parola</span><input id="activationPassword" type="password" autocomplete="new-password" required></label>
+        <label class="field"><span>Confirmă parola</span><input id="activationConfirm" type="password" autocomplete="new-password" required></label>
+        <p class="small muted">Minimum 8 caractere, literă mare, literă mică și cifră.</p>
+        <button class="btn primary wide" type="submit">Activează contul</button>
+      </form>
+      <div class="alert hidden" id="authAlert"></div>
+    </div>
+  </section>
+
+  <div class="app-shell hidden" id="appShell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><img src="/assets/kivits-goes-logo.svg" alt="Kivits Goes"><div><strong>Kivit's Goes</strong><small>Uren Online 2.0</small></div></div>
+      <nav id="navigation">
+        <button class="nav-item active" data-view="dashboard"><span>⌂</span><b>Overzicht</b></button>
+        <button class="nav-item" data-view="planning"><span>▦</span><b>Planning</b></button>
+        <button class="nav-item" data-view="clock"><span>◷</span><b>Clock</b></button>
+        <button class="nav-item" data-view="requests"><span>✓</span><b>Request review</b></button>
+        <button class="nav-item" data-view="employees"><span>♙</span><b>Angajați</b></button>
+        <button class="nav-item" data-view="cars"><span>◆</span><b>Car Planning</b></button>
+        <button class="nav-item" data-view="users"><span>⚿</span><b>Conturi</b></button>
+        <button class="nav-item" data-view="admin"><span>⚙</span><b>Control total</b></button>
+        <button class="nav-item" data-view="profile"><span>◉</span><b>Profil</b></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <button class="btn secondary wide hidden" id="installButton">Instalează pe dispozitiv</button>
+        <button class="btn danger-soft wide" id="logoutButton">Deconectare</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-button" id="menuButton" aria-label="Meniu">☰</button>
+        <div class="top-context"><strong id="pageContext">Overzicht</strong><small id="scopeContext">Online</small></div>
+        <div class="top-spacer"></div>
+        <div class="profile-mini"><img id="topPhoto" src="/assets/default-avatar.svg" alt=""><div><strong id="topName">—</strong><small id="topRole">—</small></div></div>
+      </header>
+      <section class="content" id="content"></section>
+    </main>
+  </div>
+
+  <dialog class="modal" id="modal">
+    <form id="modalForm">
+      <header class="modal-head"><div><p class="eyebrow" id="modalEyebrow">FORMULAR</p><h2 id="modalTitle">—</h2></div><button type="button" class="icon-btn" id="modalClose">×</button></header>
+      <div class="modal-body" id="modalBody"></div>
+      <footer class="modal-foot" id="modalFooter"><button type="button" class="btn secondary" id="modalCancel">Anulează</button><button type="submit" class="btn primary" id="modalSubmit">Salvează</button></footer>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast"></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
