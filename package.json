@@ -1,0 +1,14 @@
+{
+  "name": "kivits-goes-uren-online",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Production-ready workforce planning and time tracking web application.",
+  "engines": {"node": ">=22.5.0"},
+  "scripts": {
+    "start": "node src/server.mjs",
+    "dev": "NODE_ENV=development node --watch src/server.mjs",
+    "check": "node --check src/server.mjs && node --check src/db.mjs && node --check src/security.mjs && node --check src/domain.mjs && node --check public/app.js",
+    "test": "node tests/e2e.mjs"
+  }
+}
