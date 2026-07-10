@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 240" role="img" aria-labelledby="title desc">
+  <title id="title">Kivit's Goes</title>
+  <desc id="desc">Kivit's Goes Uren Online</desc>
+  <rect width="720" height="240" rx="28" fill="#ffffff"/>
+  <rect x="10" y="10" width="700" height="220" rx="24" fill="none" stroke="#0875dc" stroke-width="8"/>
+  <circle cx="118" cy="120" r="68" fill="#0875dc"/>
+  <path d="M83 74h25v38l37-38h33l-44 44 47 49h-34l-39-42v42H83z" fill="#fff"/>
+  <text x="220" y="117" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="800" fill="#102b49">Kivit's Goes</text>
+  <text x="224" y="169" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" letter-spacing="5" fill="#0875dc">UREN ONLINE</text>
+</svg>
