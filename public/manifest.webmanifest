@@ -1,0 +1,13 @@
+{
+  "name": "Kivit's Goes Uren Online",
+  "short_name": "Kivits Uren",
+  "description": "Planning, pontaj, pauze, request review și Car Planning.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f1f5f9",
+  "theme_color": "#0875dc",
+  "icons": [
+    {"src":"/assets/kivits-goes-logo.svg","sizes":"512x512","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
